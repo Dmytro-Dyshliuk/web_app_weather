@@ -1,0 +1,108 @@
+/* Основной стиль страницы */
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Нубский шрифт */
+    background-color: #1f1f1f; /* Тёмно-серый фон */
+    color: #d1d1d1; /* Светло-серый текст */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Контейнер калькулятора */
+  .calculator {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #2a2a2a; /* Ещё более тёмный фон */
+    border: 5px solid #ffc400; /* Ярко-жёлтая рамка как у Stone Island */
+    border-radius: 5px; /* Немного сглаженные углы */
+    box-shadow: 5px 5px 20px #000000; /* Жёсткая тень */
+    color: #d1d1d1;
+    position: relative;
+  }
+  
+  /* "Логотип" Stone Island на заднем плане */
+  .calculator:before {
+    content: "Stone Island™"; /* Нубская попытка сделать стильный текст */
+    position: absolute;
+    font-size: 3em;
+    color: rgba(255, 196, 0, 0.05); /* Бледно-жёлтый текст на фоне */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    pointer-events: none;
+  }
+  
+  /* Дисплей */
+  .display {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    border: 3px solid #ffc400; /* Жёлтая рамка */
+    border-radius: 3px;
+    background-color: #000; /* Чёрный фон дисплея */
+    color: #0cff00; /* Зелёный цвет текста, напоминающий старые дисплеи */
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Кнопки */
+  button {
+    font-family: 'Arial', sans-serif; /* Более нейтральный шрифт для кнопок */
+    font-size: 1.2em;
+    border: 2px solid #ffc400; /* Жёлтая рамка на кнопках */
+    border-radius: 3px;
+    background-color: #333; /* Тёмный фон кнопок */
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #000; /* Жёсткие тени */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Эффекты нажатия */
+  button:hover {
+    background-color: #ffc400; /* Жёлтая подсветка при наведении */
+    color: #000;
+    transform: scale(1.05); /* Легкое увеличение */
+  }
+  
+  button:active {
+    transform: scale(0.95); /* Уменьшение при нажатии */
+    box-shadow: inset 2px 2px 5px #000;
+  }
+  
+  /* Кнопки операций */
+  .operator {
+    background-color: #004400; /* Зелёный фон, но тёмный */
+    color: #fff;
+  }
+  
+  .operator:hover {
+    background-color: #00ff00; /* Ярко-зелёный при наведении */
+    color: #000;
+  }
+  
+  /* Кнопка равно */
+  .equals {
+    background-color: #ff0000; /* Ярко-красная кнопка равно */
+    color: #fff;
+    grid-column: span 2;
+  }
+  
+  .equals:hover {
+    background-color: #f90666; /* Светлее при наведении */
+  }
+  
+  /* Кнопки очистки */
+  .clear {
+    background-color: #666; /* Серый фон */
+    color: #fff;
+    grid-column: span 2;
+  }
+  
+  .clear:hover {
+    background-color: #888; /* Светло-серый при наведении */
+  }
